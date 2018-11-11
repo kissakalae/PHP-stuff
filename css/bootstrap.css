@@ -2677,10 +2677,10 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-success {
-  color: #28a745;
-  background-color: transparent;
+  color: #FAFAFA;
+  background-color: #AFAFAF;
   background-image: none;
-  border-color: #28a745;
+  border-color: none;
 }
 
 .btn-outline-success:hover {
@@ -3869,6 +3869,12 @@ input[type="button"].btn-block {
   .custom-select {
     transition: none;
   }
+}
+
+.vl {
+  float: left;
+  border-left: 1px solid #FFFFFF;
+  height: 40px;
 }
 
 .nav {
@@ -6127,7 +6133,7 @@ button.bg-warning:focus {
 }
 
 .bg-danger {
-  background-color: #dc3545 !important;
+  background-color: #991a20 !important;
 }
 
 a.bg-danger:hover, a.bg-danger:focus,
