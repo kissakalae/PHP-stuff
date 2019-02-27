@@ -28,11 +28,9 @@ Host information: 127.0.0.1:50361
 	$result = $conn->query($sql);
 	
 	function tulokset() {
-		if ($result->num_rows > 0) {
-        // output data of each row
+		
         while($row = $result->fetch_assoc()) {
             echo "Asiakasnumero: " . $row["asiakasid"]. "<br>- Sähköposti: " . $row["sahkoposti"]. "<br>- Etunimi: " . $row["etunimi"];
-        }
 	}
     }
 	
@@ -41,7 +39,6 @@ Host information: 127.0.0.1:50361
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--
   <head>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   </head>
@@ -165,5 +162,4 @@ Host information: 127.0.0.1:50361
   <div style="height: 1200px;">
   </div>
   </body>
--->
 </html>
