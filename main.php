@@ -10,36 +10,7 @@ Host information: 127.0.0.1:50361
 
 <?php
 	
-	$servername = "127.0.0.1:50361";
-	$username = "azure";
-	$password = "6#vWHD_$";
-	$dbname = "localdb";
 	
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	
-	if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-	} else {
-	echo "Connected successfully";
-	}
-	
-	
-	$sql = "SELECT * FROM asiakas;";
-		
-	$result = $conn->query($sql);
-	
-	function tulokset() {
-		if ($result->num_rows > 0) {
-        // output data of each row
-        while($row = $result->fetch_assoc()) {
-            echo "Asiakasnumero: " . $row["asiakasid"] . " Nimi: " . $row["etunimi"] . " " . $row["sukunimi"]. "<br>" . "Sähköposti: " . $row["sakoposti"] . "<br>";
-        }
-    } else {
-        echo "0 results";
-		}
-	}
-	
-	echo "<h2>" . tulokset() . "</h2>";
 	
 	
 ?> 
@@ -107,9 +78,38 @@ Host information: 127.0.0.1:50361
        <div class="card-body">
          <h4 class="card-title">Tuote</h4>
          <p class="card-text">
+			 
 			 <? 
-			tulokset();
+			$servername = "127.0.0.1:50361";
+	$username = "azure";
+	$password = "6#vWHD_$";
+	$dbname = "localdb";
+	
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	
+	if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+	} else {
+	echo "Connected successfully";
+	}
+	
+	
+	$sql = "SELECT * FROM asiakas;";
+		
+	$result = $conn->query($sql);
+	
+	function tulokset() {
+		if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo "Asiakasnumero: " . $row["asiakasid"] . " Nimi: " . $row["etunimi"] . " " . $row["sukunimi"]. "<br>" . "Sähköposti: " . $row["sakoposti"] . "<br>";
+        }
+    } else {
+        echo "0 results";
+		}
+	}
 			 ?>
+			 
 		   </p>
        </div>
        <div class="card-footer">
