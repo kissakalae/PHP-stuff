@@ -31,12 +31,10 @@ Host information: 127.0.0.1:50361
 		if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            echo "id: " . $row["asiakasid"]. " - Name: " . $row["sahkoposti"]. "<br>";
+            echo "Asiakasnumero: " . $row["asiakasid"]. "<br>- Sähköposti: " . $row["sahkoposti"]. "<br>- Etunimi: " . $row["etunimi"];
         }
-    } else {
-        echo "0 results";
-    	}
-	}
+	}        echo "0 results";
+    }
 	
 ?> 
 
