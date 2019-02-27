@@ -36,8 +36,9 @@ Host information: 127.0.0.1:50361
         }
     } else {
         echo "0 results";
-    }
+		}
 	}
+	
 	echo "<h2>" . tulokset() . "</h2>";
 	
 	
@@ -105,7 +106,11 @@ Host information: 127.0.0.1:50361
        <img class="card-img-top" src="http://placehold.it/500x325" alt="">
        <div class="card-body">
          <h4 class="card-title">Tuote</h4>
-         <p class="card-text">ryhj hfgjdiogji HÅFGODHO NDANPFD GMPOAFGHOMJDPOFGPOM</p>
+         <p class="card-text">
+			 <? 
+			 echo "palikka";
+			 ?>
+		   </p>
        </div>
        <div class="card-footer">
          <a href="#" class="btn btn-secondary">Hinta</a>
