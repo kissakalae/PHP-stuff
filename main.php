@@ -108,7 +108,7 @@ Host information: 127.0.0.1:50361
          <h4 class="card-title">Tuote</h4>
          <p class="card-text">
 			 <? 
-			 echo "palikka";
+			tulokset();
 			 ?>
 		   </p>
        </div>
