@@ -31,7 +31,7 @@ Host information: 127.0.0.1:50361
 	 if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            echo "id: " . $row["id"]. " - Name: " . $row["Name"]. "<br>";
+            echo "Sähköpostit: " . $row["sahkoposti"]. "<br>";
         }
     } else {
         echo "0 results";
