@@ -26,12 +26,9 @@ Host information: 127.0.0.1:50361
 	$sql = "SELECT sahkoposti FROM asiakas;";
 		
 	$result = $conn->query($sql);
-	
-	function tulokset(){
 		
-        while($row = $result->fetch_assoc()) {
+    while($row = $result->fetch_assoc()) {
             echo "Sähköposti: " . $row["sahkoposti"];
-		}
     }
 	
 	$conn->close();
