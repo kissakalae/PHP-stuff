@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 <html>
 
-/* 
+<!--
 dbusername: azure
 dbpassword: 6#vWHD_$
 Host information: 127.0.0.1:50361
-*/
+*/ -->
 
 <?php
 	
@@ -28,7 +28,18 @@ Host information: 127.0.0.1:50361
 		
 	$result = $conn->query($sql);
 	
-	echo "<h2>" . $result . "</h2>";
+	function tulokset() {
+		if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo "id: " . $row["id"]. " - Name: " . $row["Name"]. "<br>";
+        }
+    } else {
+        echo "0 results";
+    }
+	}
+	echo "<h2>" . tulokset() . "</h2>";
+	
 	
 ?> 
 
