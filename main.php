@@ -28,10 +28,14 @@ Host information: 127.0.0.1:50361
 		
 	$result = $conn->query($sql);
 		
-	
-    while($row = $result->fetch_assoc()) {
-            echo "Sähköposti: " . $row["sahkoposti"];
-	}
+	 if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo "id: " . $row["id"]. " - Name: " . $row["Name"]. "<br>";
+        }
+    } else {
+        echo "0 results";
+	 }
 	$conn->close();
 	}
 	
