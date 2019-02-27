@@ -24,7 +24,7 @@ Host information: 127.0.0.1:50361
 	}
 	
 	
-	$sql = "SELECT sahkoposti FROM asiakas;";
+	$sql = "SELECT * FROM asiakas;";
 		
 	$result = $conn->query($sql);
 	
@@ -32,7 +32,7 @@ Host information: 127.0.0.1:50361
 		if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            echo "id: " . $row["id"]. " - Name: " . $row["Name"]. "<br>";
+            echo "Asiakasnumero: " . $row["asiakasid"] . " Nimi: " . $row["etunimi"] . " " . $row["sukunimi"]. "<br>" . "Sähköposti: " . $row["sakoposti"] . "<br>";
         }
     } else {
         echo "0 results";
