@@ -30,7 +30,7 @@ Host information: 127.0.0.1:50361
 	function tulokset() {
 		
         while($row = $result->fetch_assoc()) {
-            echo "Asiakasnumero: " . $row["asiakasid"]. "<br>- Sähköposti: " . $row["sahkoposti"]. "<br>- Etunimi: " . $row["etunimi"];
+            echo "Sähköposti: " . $row["sahkoposti"];
 	}
     }
 	
