@@ -34,7 +34,6 @@ Host information: 127.0.0.1:50361
 	}
     }
 	
-	echo tulokset();
 ?> 
 
 <meta charset="utf-8">
