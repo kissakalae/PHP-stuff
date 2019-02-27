@@ -23,7 +23,7 @@ Host information: 127.0.0.1:50361
 	echo "Connected successfully";
 	}
 	
-	$sql = "SELECT * FROM asiakas;";
+	$sql = "SELECT sahkoposti FROM asiakas;";
 		
 	$result = $conn->query($sql);
 	
@@ -31,8 +31,9 @@ Host information: 127.0.0.1:50361
 		
         while($row = $result->fetch_assoc()) {
             echo "Sähköposti: " . $row["sahkoposti"];
-	}
+		}
     }
+	
 	$conn->close();
 	
 ?> 
