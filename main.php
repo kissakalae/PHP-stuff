@@ -23,8 +23,7 @@ Host information: 127.0.0.1:50361
 	echo "Connected successfully";
 	}
 	
-	echo lul;
-	
+	$sql = "SELECT * FROM asiakas;"
 	
 ?> 
 
@@ -38,7 +37,7 @@ Host information: 127.0.0.1:50361
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <a class="navbar-brand" href="#">Hockey Base</a>
+      <a class="navbar-brand" href="#"><?php echo $sql ?></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
