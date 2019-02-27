@@ -28,6 +28,8 @@ Host information: 127.0.0.1:50361
 		
 	$result = $conn->query($sql);
 	
+	echo "<h2>" . $result . "</h2>";
+	
 ?> 
 
 <meta charset="utf-8">
@@ -92,7 +94,7 @@ Host information: 127.0.0.1:50361
        <img class="card-img-top" src="http://placehold.it/500x325" alt="">
        <div class="card-body">
          <h4 class="card-title">Tuote</h4>
-         <p class="card-text"><?php echo $result ?></p>
+         <p class="card-text">ryhj hfgjdiogji HÅFGODHO NDANPFD GMPOAFGHOMJDPOFGPOM</p>
        </div>
        <div class="card-footer">
          <a href="#" class="btn btn-secondary">Hinta</a>
