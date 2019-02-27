@@ -27,14 +27,16 @@ Host information: 127.0.0.1:50361
 		
 	$result = $conn->query($sql);
 	
-    if ($result->num_rows > 0) {
+	function tulokset() {
+		if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
             echo "id: " . $row["asiakasid"]. " - Name: " . $row["sahkoposti"]. "<br>";
         }
     } else {
         echo "0 results";
-    }
+    	}
+	}
 	
 ?> 
 
@@ -101,7 +103,7 @@ Host information: 127.0.0.1:50361
        <img class="card-img-top" src="http://placehold.it/500x325" alt="">
        <div class="card-body">
          <h4 class="card-title">Tuote</h4>
-         <p class="card-text"><?php echo $result() ?></p>
+         <p class="card-text"><?php tulokset(); ?></p>
        </div>
        <div class="card-footer">
          <a href="#" class="btn btn-secondary">Hinta</a>
