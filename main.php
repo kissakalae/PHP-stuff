@@ -10,18 +10,49 @@ Host information: 127.0.0.1:50361
 
 <?php
 	
+<<<<<<< HEAD
 		$servername = "127.0.0.1:50361";
+=======
+	$servername = "127.0.0.1:50361";
+>>>>>>> parent of 2062343... GPFIehigphfgkoTJYHORE UUTTA
 	$username = "azure";
 	$password = "6#vWHD_$";
 	$dbname = "localdb";
 	
 	$conn = new mysqli($servername, $username, $password, $dbname);
+<<<<<<< HEAD
 	
 	if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 	} else {
 	echo "Connected successfully";
 	}
+=======
+	
+	if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+	} else {
+	echo "Connected successfully";
+	}
+	
+	
+	$sql = "SELECT * FROM asiakas;";
+		
+	$result = $conn->query($sql);
+	
+	function tulokset() {
+		if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo "Asiakasnumero: " . $row["asiakasid"] . " Nimi: " . $row["etunimi"] . " " . $row["sukunimi"]. "<br>" . "Sähköposti: " . $row["sakoposti"] . "<br>";
+        }
+    } else {
+        echo "0 results";
+		}
+	}
+	
+	echo "<h2>" . tulokset() . "</h2>";
+>>>>>>> parent of 2062343... GPFIehigphfgkoTJYHORE UUTTA
 	
 		$sql = "SELECT * FROM asiakas;";
 		$result = $conn->query($sql);
@@ -100,6 +131,12 @@ Host information: 127.0.0.1:50361
        <div class="card-body">
          <h4 class="card-title">Tuote</h4>
          <p class="card-text">
+<<<<<<< HEAD
+=======
+			 <? 
+			tulokset();
+			 ?>
+>>>>>>> parent of 2062343... GPFIehigphfgkoTJYHORE UUTTA
 		   </p>
        </div>
        <div class="card-footer">
